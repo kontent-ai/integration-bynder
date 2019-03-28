@@ -1,0 +1,16 @@
+extends ../../../server/views/custom-element-layout
+
+block head-extension
+  - var title  = 'Bynder media selector';
+
+block content
+  .selector
+    button.clear(type="button") Clear
+    #bynder-compactview(data-assetTypes="image", data-autoload="false", data-button="Add images", data-collections="true", data-defaultEnvironment="", data-fullScreen="false", data-header="true", data-language="en_US", data-mode="multi", data-zindex="300")
+    img.logo(src="bynder_logo.png", alt="Bynder", title="Bynder")
+  .spacer
+  .title
+    .text
+  .selected
+  script(src="https://d8ejoa1fys2rk.cloudfront.net/modules/compactview/includes/js/client-1.4.0.min.js")
+
