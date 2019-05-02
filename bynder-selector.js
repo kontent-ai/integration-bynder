@@ -71,7 +71,12 @@ function imageTile($parent, item, remove) {
 
   var $actions = $('<div class="actions"></div>').appendTo($tile);
 
-  var $remove = $(`<div class="action remove" title="Remove"><i class="icon-remove"></i></div>`)
+  if (item.webUrl) {
+    $(`<a class="action download" title="Download" href="${item.webUrl}" target="_blank"><i class="icon-download"></i></a>`)
+      .appendTo($actions);
+  }
+
+  $(`<div class="action remove" title="Remove"><i class="icon-remove"></i></div>`)
     .appendTo($actions)
     .click(function () {
       remove(item.id);
@@ -126,7 +131,8 @@ function setupSelector(value) {
           images = images.filter(image => image.id !== asset.id);
           images.push({
             id: asset.id,
-            previewUrl: asset.thumbnails['webimage'],
+            previewUrl: asset.thumbnails[config.previewDerivative || 'webimage'],
+            webUrl: asset.thumbnails[config.webDerivative || 'webimage'],
             title: asset.name,
           });
           break;
@@ -154,6 +160,14 @@ function initCustomElement() {
     CustomElement.init((element, _context) => {
       // Setup with initial value and disabled state
       config = element.config || {};
+
+      if (config.bynderUrl) {
+        $('#bynder-compactview').attr('data-defaultEnvironment', config.bynderUrl);
+      }
+      $('body').append(
+        '<script type="text/javascript" src="https://d8ejoa1fys2rk.cloudfront.net/modules/compactview/includes/js/client-1.4.0.min.js"></script>'
+      );
+
       validateConfig();
       updateDisabled(element.disabled);
       setupSelector(element.value);

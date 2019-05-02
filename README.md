@@ -11,6 +11,19 @@ If you want to use Bynder image selector in your project in Kentico Cloud, follo
 * Add **Custom element** content element
 * Open configuration of the content element
 * Use following URL as Hosted code URL (HTTPS): https://kentico.github.io/custom-element-samples/Bynder/image-selector.html
+* Optionally provide the following JSON parameters for the custom element
+
+```
+{
+  "bynderUrl": "<YOUR BYNDER URL>",
+  "previewDerivative": "webimage",
+  "webDerivative": "webimage"
+}
+```
+
+If you don't provide bynder URL, the selector will prompt for it while logging in.
+
+The derivative parameters can be used to alter which of the defined image derivatives will be used by the selector and output. By default the web image URL is used. 
 
 # Installation
 
