@@ -8,7 +8,7 @@ var isDisabled = true;
 var config = null;
 
 function updateDisabled(disabled) {
-  var elements = $(".selector").add(".remove").add(".spacer");
+  const elements = $(".selector").add(".remove").add(".spacer");
   if (disabled) {
     elements.hide();
   } else {
@@ -19,16 +19,16 @@ function updateDisabled(disabled) {
 }
 
 function remove(id) {
-  var images = currentValue || [];
-  var newImages = images.filter(image => image.id !== id);
+  const images = currentValue || [];
+  const newImages = images.filter(image => image.id !== id);
 
   updateValue(newImages);
 }
 
 function renderSelected(images) {
-  var $selected = $(".selected").empty();
-  var $titleText = $(".title").find(".text");
-  var $clear = $(".clearbtn").hide();
+  const $selected = $(".selected").empty();
+  const $titleText = $(".title").find(".text");
+  const $clear = $(".clearbtn").hide();
 
   if (images && images.length) {
     $titleText.text('Selected images');
@@ -36,7 +36,7 @@ function renderSelected(images) {
     $clear.show();
 
     for (var i = 0; i < images.length; i++) {
-      var image = images[i];
+      const image = images[i];
       if (image && image.id && image.title) {
         imageTile($selected, image, remove);
       }
@@ -66,10 +66,10 @@ function updateValue(images) {
 }
 
 function imageTile($parent, item, remove) {
-  var $tile = $(`<div class="tile" title="${item.title}"></div>`)
+  const $tile = $(`<div class="tile" title="${item.title}"></div>`)
     .appendTo($parent);
 
-  var $actions = $('<div class="actions"></div>').appendTo($tile);
+  const $actions = $('<div class="actions"></div>').appendTo($tile);
 
   if (item.webUrl) {
     $(`<a class="action download" title="Download" href="${item.webUrl}" target="_blank"><i class="icon-download"></i></a>`)
@@ -83,7 +83,7 @@ function imageTile($parent, item, remove) {
     });
 
   if (item.previewUrl) {
-    var $preview = $('<div class="preview"></div>').appendTo($tile);
+    const $preview = $('<div class="preview"></div>').appendTo($tile);
 
     $('<img draggable="false" class="thumbnail" />')
       .attr("src", item.previewUrl)
@@ -95,8 +95,8 @@ function imageTile($parent, item, remove) {
       .appendTo($tile);
   }
 
-  var $info = $(`<div class="info"></div>`).appendTo($tile)
-  var $title = $(`<div class="name">${item.title}</div>`).appendTo($info);
+  const $info = $(`<div class="info"></div>`).appendTo($tile)
+  $(`<div class="name">${item.title}</div>`).appendTo($info);
 
   updateSize();
 }
@@ -118,13 +118,12 @@ function setupSelector(value) {
 
   document.addEventListener('BynderAddMedia', function (e) {
     // The selected assets are found in the event detail property
-    var selectedAssets = e.detail;
+    const selectedAssets = e.detail;
 
     var images = currentValue || [];
 
-    var asset;
     for (var i = 0; i < selectedAssets.length; i++) {
-      asset = selectedAssets[i];
+      const asset = selectedAssets[i];
       switch (asset.type) {
         case 'image':
           // Avoid duplicates
@@ -152,9 +151,6 @@ function updateSize() {
   CustomElement.setHeight(height);
 }
 
-function validateConfig() {
-}
-
 function initCustomElement() {
   try {
     CustomElement.init((element, _context) => {
@@ -168,7 +164,6 @@ function initCustomElement() {
         '<script type="text/javascript" src="https://d8ejoa1fys2rk.cloudfront.net/modules/compactview/includes/js/client-1.4.0.min.js"></script>'
       );
 
-      validateConfig();
       updateDisabled(element.disabled);
       setupSelector(element.value);
       updateSize();
