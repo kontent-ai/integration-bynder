@@ -1,5 +1,7 @@
 # Bynder image selector for Kentico Cloud
 
+[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
+
 This repository contains source code of Bynder image selector custom element for Kentico Cloud
 
 # Use
