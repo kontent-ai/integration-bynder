@@ -38,8 +38,16 @@ Prerequisites:
 ```
 git clone https://github.com/Kentico/custom-element-devkit.git
 cd custom-element-devkit
-git clone https://github.com/kenticomartinh/kc-bynder.git ./client/custom-elements/kc-bynder
+git clone https://github.com/Kentico/cloud-custom-element-sample-bynder.git ./client/custom-elements/cloud-custom-element-sample-bynder
 npm install --save jquery
 npm start -- -hw
 ```
-Browse: https://localhost:3000/custom-elements/kc-bynder/wrap
+Browse: https://localhost:3000/custom-elements/cloud-custom-element-sample-bynder/wrap
+
+# Live site implementation sample
+
+If you want to see live site example of Bynder images displayed on the live site, browse to a [deployed sample site](https://kentico-cloud-sample-app-react-bynder.surge.sh/en-us/articles/cf106f4e-30a4-42ef-b313-b8ea3fd3e5c5).
+
+See source code of the sample site implementation [here](https://github.com/Kentico/cloud-sample-app-react/commit/b4ae153a1acde2feb10b865dbf338eaca84f3c35).
+
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/cloud-custom-element-sample-bynder?pixel)
