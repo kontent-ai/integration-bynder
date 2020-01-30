@@ -28,4 +28,11 @@ If you don't provide bynder URL, the selector will prompt for it while logging i
 
 The derivative parameters can be used to alter which of the defined image derivatives will be used by the selector and output. By default the web image URL is used.
 
+## Deploying
+
+Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your GitHub account as well.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-sample-bynder)
+
+
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/cloud-custom-element-sample-bynder?pixel)
