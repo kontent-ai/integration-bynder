@@ -1,8 +1,3 @@
-import '../../shared/custom-module.css';
-import './bynder-selector.less';
-import './bynder_logo.png';
-import $ from 'jquery';
-
 var currentValue = null;
 var isDisabled = true;
 var config = null;
