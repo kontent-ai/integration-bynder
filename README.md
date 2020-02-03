@@ -34,5 +34,8 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-sample-bynder)
 
+## Contributors
+
+Originally contributed by [@kenticomartinh](https://github.com/kenticomartinh)
 
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/cloud-custom-element-sample-bynder?pixel)
