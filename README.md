@@ -28,7 +28,21 @@ If you don't provide bynder URL, the selector will prompt for it while logging i
 
 The derivative parameters can be used to alter which of the defined image derivatives will be used by the selector and output. By default the web image URL is used.
 
-# Live site implementation sample
+## Saved Value
+The custom element saves a list of asset objects that has been included into the content item through the element.
+Example output:
+```json
+[
+  {
+    "id":"36AAB6D3-7DFE-41AB-A0B95A826D4Ctest",
+    "previewUrl":"https://d2csxpduxe849s.cloudfront.net/media/test.png",
+    "webUrl":"https://d2csxpduxe849s.cloudfront.net/media/test.png",
+    "title":"TestImage"
+  }
+]
+```
+
+## Live site implementation sample
 
 If you want to see live site example of Bynder images displayed on the live site, browse to a [deployed sample site](https://kentico-cloud-sample-app-react-bynder.surge.sh/en-us/articles/cf106f4e-30a4-42ef-b313-b8ea3fd3e5c5).
 
