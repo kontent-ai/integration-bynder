@@ -32,7 +32,7 @@ This [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/i
 ## Features
 
 - Editors can
-  - Search for assets in their bynder project
+  - Search for assets in their Bynder project
   - Link selected assets with their content items with preview directly inside of the Kontent editor
   
 
@@ -48,10 +48,11 @@ Netlify has made this easy. If you click the deploy button below, it will guide 
 
 
 ## Bynder configuration
-You don't need to do anything special inside of your Bynder account in order to access the data through the custom element. Instead, you'll be prompted to login into your Bynder account to access your asset library. 
+You don't need to do anything special inside of your Bynder account in order to access the data through the custom element. Instead, you'll be prompted to login into your Bynder account to access your asset library (like seen in the demo animation above).
 
-This element has been created by simply adding the official **Compact View** by Bynder. You can learn more about this integration component in [its official integration](https://support.bynder.com/hc/en-us/articles/360014369640-Compact-View-overview-page) on Bynder's website.
+This element has been created by simply adding the official **Compact View** by Bynder. You can learn more about this integration component in [its official documentation](https://support.bynder.com/hc/en-us/articles/360014369640-Compact-View-overview-page) on Bynder's website.
 
+> **⚠ WARNING: You have to have a Bynder account/credentials in order to use this extension** 
 
 ## Configuring the Custom Element
 You will need to add the custom element to a content type filling in the hosted code URL and the following JSON parameters:
