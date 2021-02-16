@@ -23,7 +23,7 @@ alt="commercetools logo" width="300">
   <a href="#configuring-the-custom-element">Configuration</a> •
   <a href="#what-is-saved">Saved value</a> •
   <a href="#contributors">Contributors</a> •
-  <a href="#licence">Licence</a> •
+  <a href="#license">License</a> •
   <a href="#additional-resources">Resources</a>
 </p>
 
@@ -99,7 +99,7 @@ Originally created by [@kenticomartinh](https://github.com/kenticomartinh)
   <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-bynder" />
 </a>
 
-## Licence
+## License
 
 [MIT](https://tldrlegal.com/license/mit-license)
 
