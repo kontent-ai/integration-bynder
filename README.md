@@ -99,7 +99,7 @@ Originally created by [@kenticomartinh](https://github.com/kenticomartinh)
   <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-bynder" />
 </a>
 
-## License
+## Licence
 
 [MIT](https://tldrlegal.com/license/mit-license)
 
