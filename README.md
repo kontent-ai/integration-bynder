@@ -112,8 +112,6 @@ Originally created by [@kenticomartinh](https://github.com/kenticomartinh)
 
 
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/cloud-custom-element-sample-bynder?pixel)
-
 [last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-custom-element-bynder?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
 [contributors-url]: https://github.com/Kentico/kontent-custom-element-bynder/graphs/contributors
