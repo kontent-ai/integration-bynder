@@ -22,14 +22,8 @@ function remove(id) {
 
 function renderSelected(images) {
   const $selected = $(".selected").empty();
-  const $titleText = $(".title").find(".text");
-  const $clear = $(".clearbtn").hide();
-
+  
   if (images && images.length) {
-    $titleText.text('Selected images');
-    $titleText.addClass('title--selected');
-    $clear.show();
-
     for (var i = 0; i < images.length; i++) {
       const image = images[i];
       if (image && image.id && image.title) {
@@ -38,7 +32,6 @@ function renderSelected(images) {
     }
   }
   else {
-    $titleText.text('No image selected');
     $titleText.removeClass('title--selected')
   }
   updateSize();
@@ -46,6 +39,7 @@ function renderSelected(images) {
 
 function updateValue(images) {
   // Send updated value to Kentico (send null in case of the empty string => element will not meet required condition).
+  console.log(images);
   if (!isDisabled) {
     if (images && images.length) {
       currentValue = images;
@@ -61,46 +55,40 @@ function updateValue(images) {
 }
 
 function imageTile($parent, item, remove) {
-  const $tile = $(`<div class="tile" title="${item.title}"></div>`)
+  const $tile = $(`<div class="asset-thumbnail"></div>`)
     .appendTo($parent);
 
-  const $actions = $('<div class="actions"></div>').appendTo($tile);
+  const $tileInside = $(`<div class="asset-preview"></div>`).appendTo($tile);
+  
+  const $actions = $('<div class="asset-thumbnail__actions-pane"></div>').appendTo($tileInside);
 
   if (item.webUrl) {
-    $(`<a class="action download" title="Download" href="${item.webUrl}" target="_blank"><i class="icon-download"></i></a>`)
+    $(`<a class="action" title="Download" href="${item.webUrl}" target="_blank"><i class="icon-arrow-down-line"></i></a>`)
       .appendTo($actions);
   }
 
-  $(`<div class="action remove" title="Remove"><i class="icon-remove"></i></div>`)
+  $(`<a class="remove" title="Remove"><i class="icon-times"></i></a>`)
     .appendTo($actions)
     .click(function () {
       remove(item.id);
     });
 
   if (item.previewUrl) {
-    const $preview = $('<div class="preview"></div>').appendTo($tile);
-
-    $('<img draggable="false" class="thumbnail" />')
-      .attr("src", item.previewUrl)
-      .appendTo($preview)
+    $(`<a href="${item.bynderUrl}" target="_blank"><img class="asset-thumbnail__image" src="${item.previewUrl}" /></a>`)
+      .appendTo($tileInside)
       .on('load', updateSize);
   }
   else {
     $('<div class="noimage">No image available</div>')
-      .appendTo($tile);
+      .appendTo($tileInside);
   }
 
-  const $info = $(`<div class="info"></div>`).appendTo($tile)
-  $(`<div class="name">${item.title}</div>`).appendTo($info);
-
+  $(`<div class="asset-thumbnail__bottom">${item.title}</div>`).appendTo($tileInside);
+  
   updateSize();
 }
 
-function setupSelector(value) {
-  $('.clear').click(function() {
-    updateValue(null);
-  });
-
+function setupSelector(value) {  
   if (value) {
     currentValue = JSON.parse(value);
     renderSelected(currentValue);
@@ -108,56 +96,53 @@ function setupSelector(value) {
   else {
     renderSelected(null);
   }
+}
 
-  window.addEventListener('resize', updateSize);
-
-  document.addEventListener('BynderAddMedia', function (e) {
-    // The selected assets are found in the event detail property
-    const selectedAssets = e.detail;
-
-    var images = currentValue || [];
-
-    for (var i = 0; i < selectedAssets.length; i++) {
-      const asset = selectedAssets[i];
-      switch (asset.type) {
-        case 'image':
-          // Avoid duplicates
-          images = images.filter(image => image.id !== asset.id);
-          images.push({
-            id: asset.id,
-            previewUrl: asset.thumbnails[config.previewDerivative || 'webimage'],
-            webUrl: asset.thumbnails[config.webDerivative || 'webimage'],
-            title: asset.name,
-          });
-          break;
+function openCompactView() {
+  CustomElement.setHeight(800);
+  
+  BynderCompactView.open({
+    defaultDomain: config.bynderUrl,
+    mode: "MultiSelect",
+    assetTypes: ["image"],
+    onSuccess: function (selectedAssets) {
+      let images = currentValue || [];
+      for (const asset of selectedAssets) {
+        console.log(asset);
+        switch (asset.type) {
+          case 'IMAGE':
+            // Avoid duplicates
+            images = images.filter(image => image.id !== asset.id);
+            images.push({
+              id: asset.id,
+              previewUrl: asset.derivatives[config.previewDerivative || 'thumbnail'],
+              webUrl: asset.derivatives[config.webDerivative || 'webImage'],
+              title: asset.name,
+              bynderUrl: asset.url,
+              updatedAt: asset.updatedAt,
+              description: asset.description
+            });
+            break;
+        }
       }
+      updateSize();
+      updateValue(images);
     }
-
-    updateValue(images);
-  });
+  })
 }
 
 function updateSize() {
   // Update the custom element height in the Kentico UI.
-  const height = isDisabled ?
-    Math.ceil($("html").height()) :
-    window.screen.height - 300;
-
+  const height = document.body.offsetHeight + 10;
   CustomElement.setHeight(height);
 }
 
 function initCustomElement() {
+ 
   try {
     CustomElement.init((element, _context) => {
       // Setup with initial value and disabled state
       config = element.config || {};
-
-      if (config.bynderUrl) {
-        $('#bynder-compactview').attr('data-defaultEnvironment', config.bynderUrl);
-      }
-      $('body').append(
-        '<script type="text/javascript" src="https://d8ejoa1fys2rk.cloudfront.net/modules/compactview/includes/js/client-1.4.0.min.js"></script>'
-      );
 
       updateDisabled(element.disabled);
       setupSelector(element.value);
