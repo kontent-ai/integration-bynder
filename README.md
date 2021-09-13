@@ -59,9 +59,9 @@ You will need to add the custom element to a content type filling in the hosted 
 
 ```json
 {
-  "bynderUrl": "<YOUR BYNDER URL>",
-  "previewDerivative": "webimage",
-  "webDerivative": "webimage"
+  "bynderUrl": "https://<YOUR BYNDER URL>",
+  "previewDerivative": "thumbnail",
+  "webDerivative": "webImage"
 }
 ```
 All of the parameters are optional. 
@@ -78,22 +78,16 @@ Example output:
     "id":"36AAB6D3-7DFE-41AB-A0B95A826D4Ctest",
     "previewUrl":"https://d2csxpduxe849s.cloudfront.net/media/test.png",
     "webUrl":"https://d2csxpduxe849s.cloudfront.net/media/test.png",
-    "title":"TestImage"
+    "title":"TestImage",
+    "bynderUrl":"https://test.getbynder.com/media/?mediaId=36AAB6D3-7DFE-41AB-A0B95A826D4Ctest",
+    "updatedAt":"2021-01-20T17:40:14Z",
+    "description" : "test image"
   }
 ]
 ```
 
-## Live site implementation sample
-
-If you want to see live site example of Bynder images displayed on the live site, browse to a [deployed sample site](https://kentico-cloud-sample-app-react-bynder.surge.sh/en-us/articles/cf106f4e-30a4-42ef-b313-b8ea3fd3e5c5).
-
-See source code of the sample site implementation [here](https://github.com/Kentico/kontent-sample-app-react/commit/b4ae153a1acde2feb10b865dbf338eaca84f3c35)
-
-
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Originally created by [@kenticomartinh](https://github.com/kenticomartinh)
 
 <a href="https://github.com/Kentico/kontent-custom-element-bynder/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-bynder" />
@@ -110,9 +104,6 @@ Originally created by [@kenticomartinh](https://github.com/kenticomartinh)
 - [Custom Element documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://docs.kontent.ai/reference/custom-elements-js-api)
 
-
-
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/cloud-custom-element-sample-bynder?pixel)
 
 [last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-custom-element-bynder?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
