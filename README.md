@@ -120,4 +120,4 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 [gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&style=for-the-badge&color=51bce0
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
-[product-demo]: docs/demo.gif?raw=true
+[product-demo]: docs/bynder.gif?raw=true
