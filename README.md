@@ -11,7 +11,7 @@
 [![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
 
 <p align="center">
-<image src="docs/kk-logo.svg" alt="kontent logo" width="300" />
+<image src="docs/kk-logo.svg" alt="kontent logo" width="200" />
 <image src="docs/bynder_logo.png" 
 alt="commercetools logo" width="300">
 </p>
