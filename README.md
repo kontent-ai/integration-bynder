@@ -11,7 +11,7 @@
 [![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
 
 <p align="center">
-<image src="docs/01-kk-logo-main.svg" alt="kontent logo" width="300" />
+<image src="docs/kk-logo.svg" alt="kontent logo" width="300" />
 <image src="docs/bynder_logo.png" 
 alt="commercetools logo" width="300">
 </p>
@@ -27,7 +27,7 @@ alt="commercetools logo" width="300">
   <a href="#additional-resources">Resources</a>
 </p>
 
-This [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) extension for [Kentico Kontent](https://kontent.ai) allows users to link selected assets from their [bynder](https://www.bynder.com/en/) asset library into their structured content.
+This [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) extension for [Kontent by Kentico](https://kontent.ai) allows users to link selected assets from their [bynder](https://www.bynder.com/en/) asset library into their structured content.
 
 ## Features
 
@@ -100,7 +100,7 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 ## Additional Resources
 
 - [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kentico Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://docs.kontent.ai/reference/custom-elements-js-api)
 
