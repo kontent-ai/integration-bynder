@@ -30,7 +30,7 @@ function renderSelected(images) {
   if (images && images.length) {
     for (var i = 0; i < images.length; i++) {
       const image = images[i];
-      if (image && image.id && image.title) {
+      if (image) {
         imageTile($selected, image, remove);
       }
     }
@@ -73,7 +73,7 @@ function imageTile($parent, item, remove) {
     $('<div class="noimage">No image available</div>').appendTo($tileInside);
   }
 
-  $(`<div class="asset-thumbnail__bottom">${item.title}</div>`).appendTo($tileInside);
+  $(`<div class="asset-thumbnail__bottom">${item.name}</div>`).appendTo($tileInside);
 }
 
 function setupSelector(value) {  
@@ -96,19 +96,20 @@ function openCompactView() {
     onSuccess: function (selectedAssets) {
       let images = currentValue || [];
       for (const asset of selectedAssets) {
-        console.log(asset);
         switch (asset.type) {
           case 'IMAGE':
             // Avoid duplicates
             images = images.filter(image => image.id !== asset.id);
             images.push({
               id: asset.id,
-              previewUrl: asset.derivatives[config.previewDerivative || 'thumbnail'],
-              webUrl: asset.derivatives[config.webDerivative || 'webImage'],
-              title: asset.name,
+              databaseId: asset.databaseId,
+              name: asset.name,
               bynderUrl: asset.url,
               updatedAt: asset.updatedAt,
-              description: asset.description
+              description: asset.description,
+              previewUrl: asset.derivatives[config.previewDerivative || 'thumbnail'],
+              webUrl: asset.derivatives[config.webDerivative || "webImage"],
+              files: asset.files
             });
             break;
         }
