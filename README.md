@@ -22,6 +22,7 @@ alt="commercetools logo" width="300">
   <a href="#quick-deploy">Deploy</a> •
   <a href="#configuring-the-custom-element">Configuration</a> •
   <a href="#what-is-saved">Saved value</a> •
+  <a href="#dat">DAT</a> •
   <a href="#contributors">Contributors</a> •
   <a href="#license">License</a> •
   <a href="#additional-resources">Resources</a>
@@ -66,7 +67,7 @@ You will need to add the custom element to a content type filling in the hosted 
 ```
 All of the parameters are optional. 
 If you don't provide bynder URL, the selector will prompt for it while logging in.
-The derivative parameters can be used to alter which of the defined image derivatives will be used by the selector and output. By default the web image URL is used - others might be, e.g. thumbnail, or mini. More details in [the official documentation](https://support.bynder.com/hc/en-us/articles/360013871360#UUID-efe6ac1b-c1aa-62e5-f086-45cafead8b51).
+The derivative parameters can be used to alter which of the defined image derivatives will be used by the selector preview and output. More details in [the official documentation](https://support.bynder.com/hc/en-us/articles/360013871360#UUID-efe6ac1b-c1aa-62e5-f086-45cafead8b51).
 
 ## What is Saved
 
@@ -75,16 +76,39 @@ Example output:
 ```json
 [
   {
-    "id":"36AAB6D3-7DFE-41AB-A0B95A826D4Ctest",
-    "previewUrl":"https://d2csxpduxe849s.cloudfront.net/media/test.png",
-    "webUrl":"https://d2csxpduxe849s.cloudfront.net/media/test.png",
-    "title":"TestImage",
-    "bynderUrl":"https://test.getbynder.com/media/?mediaId=36AAB6D3-7DFE-41AB-A0B95A826D4Ctest",
+    "id":"36AAB6D3-7DFE-41AB-A0B95A826D4C",
+    "databaseId":"a8ad6713-8687-4356-b22f-d09334bdf7b2",
+    "name": "test image",
+    "description" : "test image description",
     "updatedAt":"2021-01-20T17:40:14Z",
-    "description" : "test image"
-  }
+    "bynderUrl":"https://support.getbynder.com/media/?mediaId=36AAB6D3-7DFE-41AB-A0B95A826D4C",
+    "previewUrl":"https://support.bynder.com/4407064881426/test.jpg",
+    "webUrl": "https://support.bynder.com/4407064881426/webimage-test.jpg",
+    "files": [
+      {"webImage" :  
+        { "fileSize" : null, 
+          "height": 399, 
+          "url": "https://support.bynder.com/4407064881426/webimage-test.jpg", 
+          "width": 800 },
+      },
+      {"thumbnail" : 
+        { "fileSize" : null, 
+          "height": 125, 
+          "url": "https://support.bynder.com/4407064881426/thul-test.jpg", 
+          "width": 250 },
+      },
+      {"transformBaseUrl" : 
+        { "fileSize" : null, 
+          "height": null, 
+          "url": "https://datdemo.getbynder.com/transform/fb60f96f-ebf2-4a69-9ed8-8a828ef17283/Music", 
+          "width": null }
+      }
+    ]}
 ]
 ```
+
+# DAT
+If you are using Bynder's **Dynamic Asset Transformation**, your public DAT URL will be included in the ``files`` property under ``transformBaseUrl`` (see example output above). You can use this URL to generate derivates you want on the fly. To learn more about DAT visit [Bynder's documentation](https://support.bynder.com/hc/en-us/articles/360018559260-Dynamic-Asset-Transformations-DAT).
 
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
