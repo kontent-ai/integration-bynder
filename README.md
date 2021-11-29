@@ -62,12 +62,14 @@ You will need to add the custom element to a content type filling in the hosted 
 {
   "bynderUrl": "https://<YOUR BYNDER URL>",
   "previewDerivative": "thumbnail",
-  "webDerivative": "webImage"
+  "webDerivative": "webImage",
+  "assetTypes": ["image"],
+  "selectionMode": "MultiSelect"
 }
 ```
 All of the parameters are optional. 
 If you don't provide bynder URL, the selector will prompt for it while logging in.
-The derivative parameters can be used to alter which of the defined image derivatives will be used by the selector preview and output. More details in [the official documentation](https://support.bynder.com/hc/en-us/articles/360013871360#UUID-efe6ac1b-c1aa-62e5-f086-45cafead8b51).
+The derivative parameters can be used to alter which of the defined asset derivatives will be used by the selector preview and output. More details in [the official documentation](https://support.bynder.com/hc/en-us/articles/360013871360#UUID-efe6ac1b-c1aa-62e5-f086-45cafead8b51).
 
 ## What is Saved
 
