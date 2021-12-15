@@ -103,11 +103,12 @@ function openCompactView() {
           databaseId: asset.databaseId,
           name: asset.name,
           bynderUrl: asset.url,
+          originalUrl: asset.originalUrl,
           updatedAt: asset.updatedAt,
           description: asset.description,
           previewUrl: asset.derivatives[config.previewDerivative || 'thumbnail'],
           webUrl: asset.derivatives[config.webDerivative || "webImage"],
-          files: asset.files
+          files: asset.files,
         });
       }
       updateValue(assets);
