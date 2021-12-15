@@ -93,32 +93,9 @@ function openCompactView() {
     defaultDomain: config.bynderUrl,
     mode: config.selectionMode || "MultiSelect",
     assetTypes: config.assetTypes || ["image"],
-    assetFieldSelections:
-    `databaseId
-    type
-    name
-    description
-    files
-    url
-    originalUrl
-    tags
-    textMetaproperties {
-      name
-      value
-    }
-    metaproperties {
-      nodes {
-        name
-        options {
-          name
-          displayLabel
-        }
-      }
-    }`,
     onSuccess: function (selectedAssets) {
       let assets = currentValue || [];
       for (const asset of selectedAssets) {
-        console.log("Current asset: " + JSON.stringify(asset, null, 2));
         // Avoid duplicates
         assets = assets.filter(item => item.id !== asset.id);
         assets.push({
@@ -133,7 +110,6 @@ function openCompactView() {
           webUrl: asset.derivatives[config.webDerivative || "webImage"],
           files: asset.files,
         });
-        console.log("Kentico assets: " + JSON.stringify(assets, null, 2));
       }
       updateValue(assets);
       updateSize();
