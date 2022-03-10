@@ -14,8 +14,20 @@
   <script src="https://d8ejoa1fys2rk.cloudfront.net/5.0.5/modules/compactview/bynder-compactview-2-latest.js"></script>
 </head>
 
+<style>
+  #message-status {
+    /* display: none; */
+    color: #00a85b;
+  }
+  #message-status.error {
+      display: block;
+      color: #f05a22;
+  }
+</style>
+
 <body>
   <!-- Custom element HTML -->
+  <div id="message-status" style="margin-top: 4px"></div>
   <div class="selector">
     <button class="btn btn--tertiary" onclick="javascript:openCompactView()">pick from assets</button>    
   </div>
