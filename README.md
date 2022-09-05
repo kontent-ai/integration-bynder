@@ -1,5 +1,4 @@
 [![Core integration][core-shield]](https://kontent.ai/integrations/bynder)
-[![Gallery][gallery-shield]](https://kentico.github.io/kontent-custom-element-samples/gallery/)
 
 ![Last modified][last-commit]
 [![Issues][issues-shield]][issues-url]
@@ -7,11 +6,10 @@
 [![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
 
-[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kentico-kontent)
-[![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
+[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kontent-ai)
 
 <p align="center">
-<image src="docs/kk-logo.svg" alt="kontent logo" width="200" />
+<image src="docs/kai-logo-symbol-color-rgb.svg" alt="kontent logo" width="200" />
 <image src="docs/bynder_logo.png" 
 alt="commercetools logo" width="300">
 </p>
@@ -28,13 +26,13 @@ alt="commercetools logo" width="300">
   <a href="#additional-resources">Resources</a>
 </p>
 
-This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions) extension for [Kontent by Kentico](https://kontent.ai) allows users to link selected assets from their [bynder](https://www.bynder.com/en/) asset library into their structured content.
+This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions) extension for [Kontent.ai](https://kontent.ai) allows users to link selected assets from their [bynder](https://www.bynder.com/en/) asset library into their structured content.
 
 ## Features
 
 - Editors can
   - Search for assets in their Bynder project
-  - Link selected assets with their content items with preview directly inside of the Kontent editor
+  - Link selected assets with their content items with preview directly inside of the Kontent.ai editor
   
 
 ## Demo
@@ -45,7 +43,7 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-bynder)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/kontent-custom-element-bynder)
 
 
 ## Bynder configuration
@@ -113,8 +111,8 @@ If you are using Bynder's **Dynamic Asset Transformation**, your public DAT URL 
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<a href="https://github.com/Kentico/kontent-custom-element-bynder/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-bynder" />
+<a href="https://github.com/kontent-ai/kontent-custom-element-bynder/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/kontent-custom-element-bynder" />
 </a>
 
 ## License
@@ -123,25 +121,22 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 ## Additional Resources
 
-- [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kontent's Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
 
 
-[last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-custom-element-bynder?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kentico/kontent-custom-element-bynder/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
-[forks-url]: https://github.com/Kentico/kontent-custom-element-bynder/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
-[stars-url]: https://github.com/Kentico/kontent-custom-element-bynder/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
-[issues-url]: https://github.com/Kentico/kontent-custom-element-bynder/issues
-[license-shield]: https://img.shields.io/github/license/Kentico/kontent-custom-element-bynder.svg?style=for-the-badge
-[license-url]: https://github.com/Kentico/kontent-custom-element-bynder/blob/master/LICENSE
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/kontent-custom-element-bynder?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/kontent-custom-element-bynder.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/kontent-custom-element-bynder/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/kontent-custom-element-bynder.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/kontent-custom-element-bynder/network/members
+[stars-shield]: https://img.shields.io/github/stars/kontent-ai/kontent-custom-element-bynder.svg?style=for-the-badge
+[stars-url]: https://github.com/kontent-ai/kontent-custom-element-bynder/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/kontent-custom-element-bynder.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/kontent-custom-element-bynder/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/kontent-custom-element-bynder.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/kontent-custom-element-bynder/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
-[gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&style=for-the-badge&color=51bce0
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
-[discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
 [product-demo]: docs/bynder.gif?raw=true
