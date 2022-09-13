@@ -7,6 +7,7 @@
 [![MIT License][license-shield]][license-url]
 
 [![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kontent-ai)
+[![Discord][discord-shield]](https://discord.gg/SKCxwPtevJ)
 
 <p align="center">
 <image src="docs/kai-logo-hor-pos-rgb.svg" alt="kontent logo" width="300" />
@@ -144,4 +145,5 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 [license-url]: https://github.com/kontent-ai/custom-element-bynder/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
+[discord-shield]: https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white&style=for-the-badge
 [product-demo]: docs/bynder.gif?raw=true
