@@ -39,12 +39,17 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
 
 ![Demo Animation][product-demo]
 
-## Quick Deploy
+## Getting started
+
+### Quick Deploy
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/custom-element-bynder)
 
+### Running manually
+
+The integration is created with [Create React App](https://create-react-app.dev/). First you will need to install npm dependencies with `npm install`. Then use `npm run build` to build the integration or `npm run start` to start a local development server. See https://create-react-app.dev/docs/available-scripts for more scripts.
 
 ## Bynder configuration
 You don't need to do anything special inside of your Bynder account in order to access the data through the custom element. Instead, you'll be prompted to login into your Bynder account to access your asset library (like seen in the demo animation above).
