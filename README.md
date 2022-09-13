@@ -9,7 +9,7 @@
 [![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kontent-ai)
 
 <p align="center">
-<image src="docs/kai-logo-symbol-color-rgb.svg" alt="kontent logo" width="200" />
+<image src="docs/kai-logo-hor-pos-rgb.svg" alt="kontent logo" width="300" />
 <image src="docs/bynder_logo.png" 
 alt="commercetools logo" width="300">
 </p>
