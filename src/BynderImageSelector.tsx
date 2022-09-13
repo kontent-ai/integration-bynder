@@ -25,7 +25,7 @@ export const BynderImageSelector: FC = () => {
     // send null for [] so that the element fails validation when it should not be empty
     CustomElement.setValue(newValue.length ? JSON.stringify(newValue) : null);
     setCurrentValue(newValue);
-  }, [updateSize]);
+  }, []);
 
   useLayoutEffect(() => {
     updateSize();
@@ -53,7 +53,7 @@ export const BynderImageSelector: FC = () => {
     };
     window.addEventListener('resize', listener);
     return () => window.removeEventListener('resize', listener);
-  }, [updateSize, windowWidth]);
+  }, [updateSize, windowWidth, fixedSize]);
 
   if (currentValue === null) {
     return null;
