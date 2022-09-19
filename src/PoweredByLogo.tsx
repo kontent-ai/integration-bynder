@@ -1,4 +1,4 @@
-import bynderLogo from './bynder_logo.png'
+import bynderLogo from './images/bynder_logo.png'
 import { FC } from "react";
 
 export const PoweredByLogo: FC = () => (
