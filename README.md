@@ -49,7 +49,7 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/custom-element-bynder)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/integration-bynder)
 
 ### Running manually
 
@@ -120,8 +120,8 @@ If you are using Bynder's **Dynamic Asset Transformation**, your public DAT URL 
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<a href="https://github.com/kontent-ai/custom-element-bynder/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kontent-ai/custom-element-bynder" />
+<a href="https://github.com/kontent-ai/integration-bynder/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/integration-bynder" />
 </a>
 
 ## License
@@ -135,17 +135,17 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 - [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
 
 
-[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/custom-element-bynder?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/custom-element-bynder.svg?style=for-the-badge
-[contributors-url]: https://github.com/kontent-ai/custom-element-bynder/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kontent-ai/custom-element-bynder.svg?style=for-the-badge
-[forks-url]: https://github.com/kontent-ai/custom-element-bynder/network/members
-[stars-shield]: https://img.shields.io/github/stars/kontent-ai/custom-element-bynder.svg?style=for-the-badge
-[stars-url]: https://github.com/kontent-ai/custom-element-bynder/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kontent-ai/custom-element-bynder.svg?style=for-the-badge
-[issues-url]: https://github.com/kontent-ai/custom-element-bynder/issues
-[license-shield]: https://img.shields.io/github/license/kontent-ai/custom-element-bynder.svg?style=for-the-badge
-[license-url]: https://github.com/kontent-ai/custom-element-bynder/blob/master/LICENSE
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/integration-bynder?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/integration-bynder.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/integration-bynder/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/integration-bynder.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/integration-bynder/network/members
+[stars-shield]: https://img.shields.io/github/stars/kontent-ai/integration-bynder.svg?style=for-the-badge
+[stars-url]: https://github.com/kontent-ai/integration-bynder/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/integration-bynder.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/integration-bynder/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/integration-bynder.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/integration-bynder/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discord-shield]: https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white&style=for-the-badge
