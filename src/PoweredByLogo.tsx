@@ -1,5 +1,6 @@
-import bynderLogo from './images/bynder_logo.png'
 import { FC } from "react";
+
+import bynderLogo from './images/bynder_logo.png'
 
 export const PoweredByLogo: FC = () => (
   <div style={{ float: 'right', padding: 10 }}>

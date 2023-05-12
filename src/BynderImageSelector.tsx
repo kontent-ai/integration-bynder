@@ -1,6 +1,13 @@
-import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from 'react';
-import { PoweredByLogo } from "./PoweredByLogo";
+import React, {
+  FC,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useState
+} from 'react'
+
 import { AssetsPickerButton } from "./AssetsPickerButton";
+import { PoweredByLogo } from "./PoweredByLogo";
 import { SelectedImages } from "./SelectedImages";
 import { BynderElementImage } from "./types/bynderImage";
 
@@ -63,7 +70,7 @@ export const BynderImageSelector: FC = () => {
     if (isDisabled) {
       return;
     }
-    const newValue = currentValue?.filter(image => image.id !== id) ?? [];
+    const newValue = currentValue.filter(image => image.id !== id);
 
     updateValue(newValue);
   };
@@ -119,6 +126,6 @@ const convertBynderImage = (config: Config) => (asset: BynderImage): BynderEleme
   description: asset.description,
   files: asset.files,
   name: asset.name,
-  previewUrl: asset.derivatives[config?.previewDerivative ?? defaultPreviewDerivative],
-  webUrl: asset.derivatives[config?.webDerivative || defaultWebDerivative],
+  previewUrl: asset.derivatives[config.previewDerivative ?? defaultPreviewDerivative],
+  webUrl: asset.derivatives[config.webDerivative || defaultWebDerivative],
 })

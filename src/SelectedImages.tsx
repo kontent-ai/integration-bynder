@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { BynderElementImage } from "./types/bynderImage";
 
 type Props = Readonly<{
@@ -10,11 +11,20 @@ type Props = Readonly<{
 export const SelectedImages: FC<Props> = props => (
   <div className="selected">
     {props.images.map(image => (
-      <div key={image.id} className="asset-thumbnail">
+      <div
+        key={image.id}
+        className="asset-thumbnail"
+      >
         <div className="asset-preview">
           <div className="asset-thumbnail__actions-pane">
-            {image.webUrl && (
-              <a className="asset-action" title="Download" href={image.webUrl} target="_blank" rel="noreferrer">
+            {!!image.webUrl && (
+              <a
+                className="asset-action"
+                title="Download"
+                href={image.webUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="icon-arrow-down-line" />
               </a>
             )}
@@ -40,8 +50,16 @@ SelectedImages.displayName = 'SelectedImages';
 
 const renderImage = (image: BynderElementImage) => image.previewUrl
   ? (
-    <a href={image.bynderUrl} target="_blank" rel="noreferrer">
-      <img className="asset-thumbnail__image" src={image.previewUrl} alt={image.description} />
+    <a
+      href={image.bynderUrl}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        className="asset-thumbnail__image"
+        src={image.previewUrl}
+        alt={image.description}
+      />
     </a>
   )
   : (
