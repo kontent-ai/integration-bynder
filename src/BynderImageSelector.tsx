@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 import { AssetsPickerButton } from "./AssetsPickerButton";
 import { PoweredByLogo } from "./PoweredByLogo";
