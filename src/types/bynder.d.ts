@@ -3,7 +3,7 @@ type BynderFile = Readonly<{
   height: null | number;
   width: null | number;
   url: string;
-}>
+}>;
 
 type BynderImage = Readonly<{
   id: string;
@@ -17,10 +17,12 @@ type BynderImage = Readonly<{
 }>;
 
 declare const BynderCompactView: Readonly<{
-  open: (options: Readonly<{
-    onSuccess?: (assets: ReadonlyArray<BynderImage>) => void;
-    portal?: Readonly<{ url?: string; editable?: boolean }>;
-    mode?: 'MultiSelect' | 'SingleSelect' | 'SingleSelectFile';
-    assetTypes?: ReadonlyArray<'image' | 'video' | 'document' | 'audio'>;
-  }>) => void;
+  open: (
+    options: Readonly<{
+      onSuccess?: (assets: ReadonlyArray<BynderImage>) => void;
+      portal?: Readonly<{ url?: string; editable?: boolean }>;
+      mode?: "MultiSelect" | "SingleSelect" | "SingleSelectFile";
+      assetTypes?: ReadonlyArray<"image" | "video" | "document" | "audio">;
+    }>,
+  ) => void;
 }>;

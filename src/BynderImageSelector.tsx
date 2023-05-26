@@ -1,18 +1,12 @@
-import React, {
-  FC,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useState
-} from 'react'
+import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 import { AssetsPickerButton } from "./AssetsPickerButton";
 import { PoweredByLogo } from "./PoweredByLogo";
 import { SelectedImages } from "./SelectedImages";
 import { BynderElementImage } from "./types/bynderImage";
 
-const defaultPreviewDerivative = 'thumbnail';
-const defaultWebDerivative = 'webImage';
+const defaultPreviewDerivative = "thumbnail";
+const defaultWebDerivative = "webImage";
 
 export const BynderImageSelector: FC = () => {
   const [currentValue, setCurrentValue] = useState<ReadonlyArray<BynderElementImage> | null>(null);
@@ -41,7 +35,7 @@ export const BynderImageSelector: FC = () => {
   useEffect(() => {
     CustomElement.init((el) => {
       setConfig(el.config ?? {});
-      setCurrentValue(JSON.parse(el.value || '[]'));
+      setCurrentValue(JSON.parse(el.value || "[]"));
       setIsDisabled(el.disabled);
       updateSize();
     });
@@ -58,8 +52,8 @@ export const BynderImageSelector: FC = () => {
         updateSize();
       }
     };
-    window.addEventListener('resize', listener);
-    return () => window.removeEventListener('resize', listener);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
   }, [updateSize, windowWidth, fixedSize]);
 
   if (currentValue === null) {
@@ -81,7 +75,7 @@ export const BynderImageSelector: FC = () => {
     }
     updateSize(800);
     openBynderPicker(config, assets => updateValue(assets.map(convertBynderImage(config))));
-  }
+  };
 
   return (
     <>
@@ -101,7 +95,7 @@ export const BynderImageSelector: FC = () => {
   );
 };
 
-BynderImageSelector.displayName = 'BynderImageSelector';
+BynderImageSelector.displayName = "BynderImageSelector";
 
 type Config = Readonly<{
   bynderUrl?: string;
@@ -113,7 +107,7 @@ const openBynderPicker = (config: Config, onSuccess: (assets: ReadonlyArray<Bynd
   BynderCompactView.open({
     portal: config.bynderUrl ? { url: config.bynderUrl } : undefined,
     mode: "MultiSelect",
-    assetTypes: ['image'],
+    assetTypes: ["image"],
     onSuccess,
   });
 };
@@ -128,4 +122,4 @@ const convertBynderImage = (config: Config) => (asset: BynderImage): BynderEleme
   name: asset.name,
   previewUrl: asset.derivatives[config.previewDerivative ?? defaultPreviewDerivative],
   webUrl: asset.derivatives[config.webDerivative || defaultWebDerivative],
-})
+});
