@@ -6,7 +6,7 @@ type Props = Readonly<{
   images: ReadonlyArray<BynderElementImage>;
   isDisabled: boolean;
   removeImage: (imageId: string) => void;
-}>
+}>;
 
 export const SelectedImages: FC<Props> = props => (
   <div className="selected">
@@ -46,24 +46,25 @@ export const SelectedImages: FC<Props> = props => (
   </div>
 );
 
-SelectedImages.displayName = 'SelectedImages';
+SelectedImages.displayName = "SelectedImages";
 
-const renderImage = (image: BynderElementImage) => image.previewUrl
-  ? (
-    <a
-      href={image.bynderUrl}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <img
-        className="asset-thumbnail__image"
-        src={image.previewUrl}
-        alt={image.description}
-      />
-    </a>
-  )
-  : (
-    <div className="noimage">
-      No image available
-    </div>
-  )
+const renderImage = (image: BynderElementImage) =>
+  image.previewUrl
+    ? (
+      <a
+        href={image.bynderUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          className="asset-thumbnail__image"
+          src={image.previewUrl}
+          alt={image.description}
+        />
+      </a>
+    )
+    : (
+      <div className="noimage">
+        No image available
+      </div>
+    );
